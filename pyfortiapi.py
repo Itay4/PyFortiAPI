@@ -586,4 +586,16 @@ class FortiGate:
         api_url = self.urlbase + "api/v2/cmdb/system.snmp/community/" + str(community_id)
         result = self.delete(api_url)
         return result
+    
+    def get_antivirus_scanning_statistics(self):
+        """
+        Get SNMP community information from firewall
+
+        :param specific: If provided, a specific object will be returned. If not, all objects will be returned.
+            Specific can either be the Community string, or its internal ID.
+        :return: JSON data for all objects in scope of request, nested in a list.
+        """
+        api_url = self.urlbase + "api/v2/utm/antivirus/stats/"
+        results = self.get(api_url)
+        return results
 
