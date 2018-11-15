@@ -15,7 +15,7 @@ setup(
     long_description_content_type="text/markdown",
     author='James Simpson',
     author_email='James@snowterminal.com',
-    url='https://github.com/jsimpso/PyFortiAPI',
+    url='https://github.com/Itay4/PyFortiAPI',
     license='MIT',
     classifiers=[
         "Programming Language :: Python",
