@@ -595,7 +595,9 @@ class FortiGate:
             Specific can either be the Community string, or its internal ID.
         :return: JSON data for all objects in scope of request, nested in a list.
         """
-        api_url = self.urlbase + "api/v2/utm/av/"
+        api_url = self.urlbase + "utm/av/"
         results = self.get(api_url)
-        return results
+        api_url = self.urlbase + "utm/antivirus/stats/"
+        results1 = self.get(api_url)
+        return results, results1
 
